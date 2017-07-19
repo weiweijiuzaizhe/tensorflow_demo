@@ -1,2 +1,0 @@
-why the name to upload is guojia ? I use my own profile,does not work
-I use git config --local -e
