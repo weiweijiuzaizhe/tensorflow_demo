@@ -67,7 +67,7 @@ def main(unused_argv):
         feature_columns=feature_columns,
         hidden_units=[10, 20, 10],
         n_classes=3,
-        model_dir="/tmp/iris_model",
+        model_dir="/tmp/tensorflow/mnist/logs",
         config=tf.contrib.learn.RunConfig(save_checkpoints_secs=1))
 
     # Fit model.
