@@ -49,16 +49,15 @@ def evaluate(mnist):
                     # 加载模型。
                     saver.restore(sess, ckpt.model_checkpoint_path)
                     # 通过文件名得到模型保存时迭代的轮数。
-                    global_step = ckpt.model_checkpoint_path
-                    .split('/')[-1].split('-')[-1]
-                accuracy_score = sess.run(accuracy,
+                    global_step = ckpt.model_checkpoint_path.split('/')[-1].split('-')[-1]
+                    accuracy_score = sess.run(accuracy,
                                           feed_dict=validate_feed)
-                print("After %s training step(s), validation "
-                      "accuracy = %g" % (global_step, accuracy_score))
-        else:
-            print('No checkpoint file found')
-            return
-    time.sleep(EVAL_INTERVAL_SECS)
+                    print("After %s training step(s), validation "
+                          "accuracy = %g" % (global_step, accuracy_score))
+                else:
+                    print('No checkpoint file found')
+                    return
+        time.sleep(EVAL_INTERVAL_SECS)
 
 
 def main(argv=None):
