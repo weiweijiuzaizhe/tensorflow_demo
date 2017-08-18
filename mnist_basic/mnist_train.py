@@ -15,7 +15,7 @@ REGULARAZTION_RATE = 0.0001
 TRAINING_STEPS = 30000
 MOVING_AVERAGE_DECAY = 0.99
 # 模型保存的路径和文件名。
-MODEL_SAVE_PATH = "/path/to/model/"
+MODEL_SAVE_PATH = "/tmp/tensorflow/mnist/"
 MODEL_NAME = "model.ckpt"
 
 
