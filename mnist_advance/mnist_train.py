@@ -2,6 +2,8 @@
 import os
 
 import tensorflow as tf
+import numpy as np
+
 from tensorflow.examples.tutorials.mnist import input_data
 
 import mnist_inference
@@ -17,7 +19,7 @@ TRAIN = 1
 
 
 # 模型保存的路径和文件名。
-MODEL_SAVE_PATH = "/path/to/model/"
+MODEL_SAVE_PATH = "/tmp/tensorflow/mnist/"
 MODEL_NAME = "model.ckpt"
 
 
